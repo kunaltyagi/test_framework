@@ -24,11 +24,12 @@ class TestSequenceFunctions(unittest.TestCase):
             random.sample(self.seq, 20)
         for element in random.sample(self.seq, 5):
             self.assertTrue(element in self.seq)
-
+"""
 if __name__ == '__main__':
-    # """ @run_tests
+    # "" @run_tests
     # unittest.main()
     # or
     suite = unittest.TestLoader().loadTestsFromTestCase(TestSequenceFunctions)
     unittest.TextTestRunner(verbosity=2).run(suite)
-    # """
+    # ""
+"""
