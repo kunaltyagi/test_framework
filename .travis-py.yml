@@ -10,7 +10,16 @@ notifications:
   email:
     on_success: change
     on_failure: always
+before_install:
+    - sudo apt-get update
+install:
+    - pip install -U six
+    - pip install -U coverage
+    - pip install -U nose
+    - pip install -U mock
+    - pip install -U pytest
 script:
   nosetests
+  coverage run --branch nsiqcppstyle.py
 os:
   - linux
