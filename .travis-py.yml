@@ -18,8 +18,11 @@ install:
     - pip install -U nose
     - pip install -U mock
     - pip install -U pytest
+    - pip install -U coveralls
 script:
   nosetests
   coverage run --branch nsiqcppstyle.py
+after_success:
+  coveralls
 os:
   - linux
